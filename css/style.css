@@ -2,9 +2,6 @@
 /*?comentario en azul*/
 /*comentario normal*/
 
-/*! display: flex; x POR DEFAULT*/
-/*! justify-content EJE-x*/
-/*! align-items EJE-y*/
 
 
 *{
@@ -41,7 +38,7 @@ header nav div a .title-h1{
 
 
 /*!________________________________ MAIN _______________________________ */
-main section{
+main{
     background-color: burlywood;
 }
 .whatsapp{
@@ -52,7 +49,6 @@ main section{
 .whatsapp a img{
     width: 70px;
 }
-
 /*? _______MEDIA-QUERY-PRINCIPAL_________ */
 @media screen and (max-width:767px){
     .whatsapp{
@@ -239,17 +235,16 @@ main .descuento{
 }
 .main-venta-section1{
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    border: 5px solid grey;
+    text-align: center;
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+    margin: 50px;
 }
 .main-venta-section1{
     display: flex;
     justify-content: space-around;
-}
-.main-venta-section1 .div-principal-venta{
-    text-align: center;
-    border: 3px solid grey;
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
+    padding-bottom: 60px;
 }
 .main-venta-section1 div h3{
     margin-bottom: 20px;
@@ -258,9 +253,20 @@ main .descuento{
     height: 600px;
     width: 700px;
 }
+.main-venta-section2 div div div .venta-img{
+    height: 600px;
+    width: 700px;
+}
 .main-venta-section2{
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    border: 5px solid grey;
+    text-align: center;
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 50px;
 }
 .main-venta-section2 a{
     text-decoration: none;
@@ -272,37 +278,29 @@ main .descuento{
 .main-venta-section2{
     text-align: center;
 }
-.main-venta-section2 div img{
-    width: 400px;
-}
-.main-venta-section2 div{
-    margin-top: 1px;
-    border: 3px solid grey;
-    height: 650px;
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
-}
+
 /**? _________MEDIA-QUERY-MAIN-VENTA-**/
 @media screen and (max-width:417px){
     .main-venta-section2 div img{
         width: 300px;
     }
-    .main-venta-section2 div{
-        margin-top: 1px;
-        border: 3px solid grey;
-        height: 500px;
-        border-end-end-radius: 15px;
-        border-end-start-radius: 15px;
-    }
 }
-@media screen and (max-width:703px){
+@media screen and (max-width:811px){
     .main-venta-section1 div div div .venta-img{
         height: 400px;
         width: 500px;
     }
+    .main-venta-section2 div div div .venta-img{
+        height: 400px;
+        width: 500px;
+    }
 }
-@media screen and (max-width:503px){
+@media screen and (max-width:611px){
     .main-venta-section1 div div div .venta-img{
+        height: 350px;
+        width: 250px;
+    }
+    .main-venta-section2 div div div .venta-img{
         height: 350px;
         width: 250px;
     }
@@ -310,19 +308,18 @@ main .descuento{
 /**____________________ MAIN-ALQUILER ____________________ **/
 .main-alquiler-section1{
     flex-wrap: wrap;
-}
-.main-alquiler-section1{
+    text-align: center;
     display: flex;
     justify-content: space-around;
     height: 700px;
 }
-.main-alquiler-section1 div img{
-    width: 400px;
+.main-alquiler-section1 a{
+    text-decoration: none;
+    list-style: none;
 }
-.main-alquiler-section1 div{
-    text-align: center;
-    border: 3px solid grey;
-    height: 620px;
+.main-alquiler-section1 div div div div img{
+    width: 500px;
+    height: 400px;
 }
 .main-alquiler-section1 div h3{
     margin-bottom: 10px;
@@ -402,8 +399,6 @@ main .descuento{
     padding: 10px;
 }
 .div-1{
-/* grid-column-start: 1;
-    grid-column-end: 3; */
     height: 300px;
     grid-column: 1/3;
     background-image: url(../img/GRID-1.jpeg);
