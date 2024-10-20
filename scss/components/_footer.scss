@@ -1,0 +1,27 @@
+body{
+    footer{
+        background-color: rgb(112, 115, 116);
+        div{
+            .redes-sociales{
+                display: flex;
+                justify-content: end;
+            }
+            p{
+                display: inline-block;
+            }
+            a{
+                img{
+                    width: 40px;
+                }
+            }
+            .mapa{
+                display: flex;
+                justify-content: end;
+            }
+        }
+        img{
+            width: 100px;
+            border-radius: 70%;
+        }
+    }
+}

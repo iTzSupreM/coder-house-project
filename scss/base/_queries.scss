@@ -1,0 +1,189 @@
+//_________M-Q_PRINCIPAL_________//
+@media screen and (max-width:767px){
+    .whatsapp{
+        position: fixed;
+        bottom: 100px;
+        right: 25px;}
+    
+    .whatsapp{
+        position: fixed;
+        bottom: 100px;
+        right: 25px;
+        a{
+            img{
+                width: 35px;
+            }
+        }
+    }
+}
+//___________________________________________________________//
+
+//_________M-Q_INDEX-MAX_________//
+@media screen and (max-width:767px){
+    main{
+        .hero{
+            font-size: 2vh;
+            height: 50vh;
+            background-image: url(../img/Hero.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-attachment: fixed;
+        }
+        .descuento{
+            height: 900px;
+            div{
+                border: 1px solid grey;
+                text-align: center;
+                height: 350px;
+                border-end-end-radius: 7px;
+                border-end-start-radius: 7px;
+                img{
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+//_________M-Q_INDEX-MIN_________//
+@media screen and (max-width:378px){
+    main{
+        .hero{
+            font-size: 2vh;
+            height: 50vh;
+            background-image: url(../img/Hero.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-attachment: fixed;
+        }
+        .descuento{
+            height: 1200px;
+            div{
+                border: 1px solid grey;
+                text-align: center;
+                height: 350px;
+                border-end-end-radius: 7px;
+                border-end-start-radius: 7px;
+                img{
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+//___________________________________________________________//
+
+//_________M-Q_MAIN-CONTACTO-MAX_________//
+@media screen and (max-width:932px){
+    .main-contacto{
+        form{
+            .div-form{
+                .div-form-div{
+                    input{
+                        .form-control{
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//_________M-Q_MAIN-CONTACTO-MIN_________//
+@media screen and (max-width:538px){
+    .main-contacto{
+        form{
+            .div-form{
+                input{
+                    .form-control{
+                        width: 35% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+//___________________________________________________________//
+
+//_________M-Q_MAIN-VENTA-MAX_________//
+@media screen and (max-width:811px){
+    main{
+        .main-venta-section1{
+            div{
+                div{
+                    div{
+                        .venta-img{
+                            height: 400px;
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:811px){
+    main{
+        .main-venta-section2{
+            div{
+                div{
+                    div{
+                        .venta-img{
+                            height: 400px;
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:611px){
+    main{
+        .main-venta-section1{
+            div{
+                div{
+                    div{
+                        .venta-img{
+                            height: 350px;
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:611px){
+    main{
+        .main-venta-section2{
+            div{
+                div{
+                    div{
+                        .venta-img{
+                            height: 350px;
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//_________M-Q_MAIN-VENTA-MIN_________//
+@media screen and (max-width:417px){
+    main{
+        .main-venta-section2{
+            div{
+                div{
+                    div{
+                        img{
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
