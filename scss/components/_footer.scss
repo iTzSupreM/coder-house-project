@@ -1,27 +1,26 @@
 body{
     footer{
         background-color: rgb(112, 115, 116);
-        div{
-            .redes-sociales{
-                display: flex;
-                justify-content: end;
+        .avatar{
+            width: 100px;
+            border-radius: 70%;
+        }
+        .redes-footer{
+            display: flex;
+            justify-content: end;
+            a{
+                width: 40px;
+                height: 40px;
+                img{
+                    width: 40px;
+                    display: flex;
+                }
             }
+        }
+        div{
             p{
                 display: inline-block;
             }
-            a{
-                img{
-                    width: 40px;
-                }
-            }
-            .mapa{
-                display: flex;
-                justify-content: end;
-            }
-        }
-        img{
-            width: 100px;
-            border-radius: 70%;
         }
     }
 }

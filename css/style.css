@@ -240,7 +240,6 @@ main .descuento{
     justify-content: space-around;
     padding-bottom: 60px;
 }
-
 .main-venta-section1 div div div .venta-img{
     height: 600px;
     width: 700px;
@@ -482,4 +481,12 @@ footer div a img{
 .mapa{
     display: flex;
     justify-content: end;
+}
+.carousel-inner{
+    height: 600px !important; 
+    width: 700px !important;
+}
+.carousel-inner .carousel-item{
+    height: 600px !important;
+    width: 700px !important;
 }

@@ -1,52 +1,102 @@
 //_________M-Q_PRINCIPAL_________//
 @media screen and (max-width:767px){
-    .whatsapp{
-        position: fixed;
-        bottom: 100px;
-        right: 25px;}
-    
-    .whatsapp{
-        position: fixed;
-        bottom: 100px;
-        right: 25px;
-        a{
-            img{
-                width: 35px;
-            }
-        }
-    }
-}
-//___________________________________________________________//
-
-//_________M-Q_INDEX-MAX_________//
-@media screen and (max-width:767px){
     main{
-        .hero{
-            font-size: 2vh;
-            height: 50vh;
-            background-image: url(../img/Hero.jpeg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-attachment: fixed;
-        }
-        .descuento{
-            height: 900px;
-            div{
-                border: 1px solid grey;
-                text-align: center;
-                height: 350px;
-                border-end-end-radius: 7px;
-                border-end-start-radius: 7px;
+        .whatsapp{
+            bottom: 100px;
+            right: 25px;
+            a{
                 img{
-                    height: 250px;
+                    width: 35px;
                 }
             }
         }
     }
 }
-//_________M-Q_INDEX-MIN_________//
-@media screen and (max-width:378px){
+//___________________________________________________________//
+//_________INDEX-TABLET_________//
+@media screen and (max-width:768px){
+    main{
+        .hero{
+            font-size: 2vh;
+            height: 50vh;
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 20px;
+            }
+            a{
+                font-size: 19px;
+            }
+        }
+        .hero2{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        .descuento{
+            height: 1300px;
+            div{
+                width: 293px;
+            }
+        }
+        .whatsapp{
+            a{
+                img{
+                    width: 55px;
+                }
+            }
+        }
+    }
+}
+//_________INDEX-MOBILE-L_________//
+@media screen and (max-width:425px){
+    main{
+        .hero{
+            font-size: 1vh;
+            height: 42vh;
+            h2{
+                font-size: 20px;
+            }
+            p{
+                font-size: 16px;
+            }
+            a{
+                font-size: 15px;
+            }
+        }
+        .hero2{
+            height: 150px;
+            h2{
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;
+                padding-top: 0px;
+            }
+        }
+        .descuento{
+            height: 2000px;
+            div{
+                h3{
+                    font-size: 15px;
+                }
+            }
+        }
+        .whatsapp{
+            a{
+                img{
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
+//_________INDEX-MOBILE-S_________//
+@media screen and (max-width:px){
     main{
         .hero{
             font-size: 2vh;
@@ -74,114 +124,217 @@
 }
 //___________________________________________________________//
 
-//_________M-Q_MAIN-CONTACTO-MAX_________//
-@media screen and (max-width:932px){
+//_________CONTACTO-TABLET_________//
+@media screen and (max-width:768px){
     .main-contacto{
         form{
             .div-form{
                 .div-form-div{
-                    input{
+                    .form-control{
+                        font-size: small;
+                        width: 12%;
+                    }
+                    }
+                }
+                div{
+                    label{
+                        font-size: 18px;
+                    }
+                }
+                .enviar-div{
+                    .enviar{
+                        font-size: medium;
+                    }
+                }
+            }
+        span{
+            font-size: 21px;
+        }
+        }
+    
+}
+//_________CONTACTO-MOBILE-L_________//
+@media screen and (max-width:425px){
+    .main-contacto{
+        h2{
+            font-size: 15px;
+        }
+        form{
+            .div-form{
+                .div-form-div{
                         .form-control{
-                            font-size: small;
+                            font-size: 11px;
+                            width: 18%;
                         }
+                }
+                div{
+                    label{
+                        font-size: 14px;
+                    }
+                }
+                .enviar-div{
+                    .enviar{
+                        font-size: small;
                     }
                 }
             }
         }
-    }
-}
-//_________M-Q_MAIN-CONTACTO-MIN_________//
-@media screen and (max-width:538px){
-    .main-contacto{
-        form{
-            .div-form{
-                input{
-                    .form-control{
-                        width: 35% !important;
-                    }
-                }
-            }
+        span{
+            font-size: 12px;
         }
     }
 }
 //___________________________________________________________//
 
-//_________M-Q_MAIN-VENTA-MAX_________//
-@media screen and (max-width:811px){
-    main{
-        .main-venta-section1{
-            div{
-                div{
-                    div{
-                        .venta-img{
-                            height: 400px;
-                            width: 500px;
-                        }
-                    }
-                }
+//_________VENTA-MOBILE-L_________//
+@media screen and (max-width:520px){
+    body{
+        main{
+            height: 1400px;
+        .main-venta{
+            h2{
+                font-size: 13px;
+            }
+            p{
+                font-size: 10px;
+            }
+            a{
+                font-size: 13px;
             }
         }
-    }
-}
-@media screen and (max-width:811px){
-    main{
-        .main-venta-section2{
-            div{
-                div{
-                    div{
-                        .venta-img{
-                            height: 400px;
-                            width: 500px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:611px){
-    main{
-        .main-venta-section1{
-            div{
-                div{
-                    div{
-                        .venta-img{
-                            height: 350px;
-                            width: 250px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:611px){
-    main{
-        .main-venta-section2{
-            div{
-                div{
-                    div{
-                        .venta-img{
-                            height: 350px;
-                            width: 250px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-//_________M-Q_MAIN-VENTA-MIN_________//
-@media screen and (max-width:417px){
-    main{
-        .main-venta-section2{
-            div{
+        .venta-section{
+            .div-venta{
+                width: 300px;
+                height: 300px;
                 div{
                     div{
                         img{
                             width: 300px;
+                            height: 300px;
                         }
                     }
+                }
+                h2{
+                    font-size: nth($f-sz, 2);
+                }
+                p{
+                    font-size: 12px;
+                }
+                a{
+                    text-decoration: none;
+                }
+                }
+            }
+        }
+    }
+}
+//_________M-Q_FOOTER_________//
+@media screen and (max-width:858px){
+    body{
+        footer{
+            .avatar{
+                width: 75px;
+                border-radius: 70%;
+            }
+            .redes-footer{
+                a{
+                    width: 30px;
+                    height: 30px;
+                    img{
+                        width: 30px;
+                    }
+                }
+                .mapa{
+                    width: 170px;
+                    height: 120px;
+                }
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+//_________M-Q_NOSOTROS-TABLET_________//
+@media screen and (max-width:768px){
+    body{
+        .grid-nosotros{
+            .grid-div{
+                margin: 25px;
+                padding: 18px;
+            }
+            .div-2{
+                height: 580px;
+                font-size: nth($f-sz, 1);
+                h2{
+                    font-size: 25px;
+                }
+            }
+            .div-3{
+                height: 370px;
+                font-size: nth($f-sz, 1);
+                h2{
+                    font-size: 25px;
+                }
+            }
+            .div-5{
+                font-size: nth($f-sz, 1);
+                height: 350px;
+            }
+        }
+    }
+}
+//_________M-Q_NOSOTROS-MOBIL_________//
+@media screen and (max-width:595px){
+    body{
+        .grid-nosotros{
+            .div-2{
+                height: 380px;
+                font-size: 10px;
+                h2{
+                    font-size: nth($f-sz, 1);
+                }
+            }
+            .div-3{
+                height: 370px;
+                font-size: 10px;
+                h2{
+                    font-size: nth($f-sz, 1);
+                }
+            }
+            .div-5{
+                font-size: 10px;
+                height: 350px;
+            }
+        }
+    }
+}
+//_________M-Q_FOOTER-MOBILE-L_________//
+@media screen and (max-width:425px){
+    body{
+        footer{
+            .avatar{
+                width: 55px;
+                border-radius: 70%;
+            }
+            .redes-footer{
+                a{
+                    width: 20px;
+                    height: 20px;
+                    img{
+                        width: 20px;
+                    }
+                }
+                .mapa{
+                    width: 100px;
+                    height: 70px;
+                }
+            }
+            div{
+                p{
+                    font-size: 10px;
                 }
             }
         }

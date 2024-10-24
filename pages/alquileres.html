@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="icon" type="img/jpeg" href="../img/logo.png">
@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-header-nav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">rZ</a>
+                <a class="navbar-brand" href="./index.html"><h1>rZ</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            <a class="nav-link active " aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
@@ -31,11 +31,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/venta.html">Ventas</a>
                         </li>
-                        <li class="nav-item"></li>
-                        <a class="nav-link" href="../pages/alquileres.html">Alquileres</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/alquileres.html">Alquileres</a>
                         </li>
-                        <li class="nav-item"></li>
-                        <a class="nav-link" href="../pages/sobre-nosotros.html">Nosotros</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/sobre-nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                 </div>
@@ -45,52 +45,68 @@
     <main>
         <section class="main-venta">
             <h2>Alquileres disponibles.</h2>
-            <a href="./contacto.html">No te quedes sin tu Apartamento!.</a>
         </section>
-        <section class="main-alquiler-section1">
-            <div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://i.ibb.co/Gd1YvL4/alquiler-apt1-2.png" class="d-block w-60" alt="...">
-                            <h3>Zot'ieg</h3>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://i.ibb.co/Y2VtfwN/alquiler-apt1-3.png" class="d-block w-60" alt="...">
-                            <h3>Zot'ieg</h3>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://i.ibb.co/2KKM9nz/alquiler-apt1-4.png" class="d-block w-60" alt="...">
-                            <h3>Zot'ieg</h3>
-                        </div>
+        <section class="venta-section">
+            <div id="carouselExampleFade" class="div-venta carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://i.ibb.co/dmD3yD5/alquiler-apt2-3.jpg" class="d-block" alt="Este encantador monoambiente en alquiler se encuentra en una hermosa zona de Alt, ideal para quienes buscan comodidad y estilo. Al ingresar, te recibe un espacio abierto y luminoso, con grandes ventanales que ofrecen vistas panorámicas y llenan el ambiente de luz natural.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.ibb.co/t87WTF4/alquiler-apt2-2.jpg" class="d-block" alt="Ubicado en una zona tranquila, cerca de parques, cafeterías y tiendas, este monoambiente es ideal para aquellos que buscan un estilo de vida urbano y relajado. ¡Una excelente oportunidad para disfrutar de la vida en Alt!">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.ibb.co/W3hJtTp/alquiler-apt2-4.jpg" class="d-block" alt="La cocina es moderna y funcional, equipada con electrodomésticos de calidad y suficiente espacio de almacenamiento. El área de dormitorio está bien definida, con un acogedor rincón para una cama queen y un armario empotrado que maximiza el espacio.">
                     </div>
                 </div>
-                <a class="comprar" href="./contacto.html">Alquilar</a>
-            </div>
-            <div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://i.ibb.co/qBYpLY8/alquiler-apt2-1.jpg" class="d-block w-60" alt="...">
-                            <h3>Le' Voug</h3>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://i.ibb.co/8BCZch4/alquiler-apt2-4.jpg" class="d-block w-60" alt="...">
-                            <h3>Le' Voug</h3>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://i.ibb.co/KKWQHWr/alquiler-apt2-3.jpg" class="d-block w-60" alt="...">
-                            <h3>Le' Voug</h3>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <h2>Monoambiente Centrico</h2>
+                <p>- Cocina <br>
+                    - Living <br>
+                    - Baño <br>
+                    450$usd Mensuales</p>
                 <a class="comprar" href="./contacto.html">Alquilar</a>
             </div>
         </section>
-        <section class="main-alquiler-section2">
-            <div>
-                <img src="../img/apartamentoDIV.jpeg" alt="">
-                <h3>4to Apartamento</h3>
+        <section class="venta-section">
+            <div id="carouselExampleInterval" class="div-venta carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="https://i.ibb.co/jhjL3s8/alquiler-apt1-3.png" class="d-block" alt="apartamento con balcon amplio hermoso lugar con muy linda vista">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://i.ibb.co/h88d67G/alquiler-apt1-4.png" class="d-block" alt="living y cocina muy amplio con 2 ventanales y salida al balcon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.ibb.co/qFvP7Gv/alquiler-apt1-5.jpg" class="d-block" alt="dormitorio amplio baño mediano pero muy bien organizado y moderno cocina y living muy amplio con salida al balcon y balcon con hermosa vista">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <h2>Apartamento frente a la rambla</h2>
+                <p>- 1 Dormitorio <br>
+                    - Estar <br>
+                    - Cocina <br>
+                    - Baño <br>
+                    - Balcon <br>
+                    650$usd Mensuales</p>
                 <a class="comprar" href="./contacto.html">Alquilar</a>
             </div>
         </section>
@@ -99,19 +115,19 @@
         </div>
     </main>
     <footer>
-        <!--?__________ avatar-circle __________-->
-        <img class="avatar" src="../img/avatar.jpeg" alt="avatar">
-        <div class="redes-sociales">
-            <!--?__________ REDES-SOCIALES __________-->
+        <!--!__________ avatar-circle __________-->
+        <img class="avatar" src="../img/avatar.jpeg" alt="avatar" />
+        <div class="redes-footer">
+            <!--!__________ REDES-SOCIALES __________-->
             <a target="_blank" href="https://es-es.facebook.com/login.php/"><img class="logof" src="../img/facebook.png"
-                    alt="facebook"></a>
+                    alt="facebook" /></a>
             <a target="_blank" href="https://www.instagram.com/"><img class="logoi" src="../img/instagram.png"
-                    alt="instagram"></a>
-            <a target="_blank" href="https://x.com/"><img class="logot" src="../img/twitter.png" alt="twitter"></a>
-            <!--?__________ REDES-SOCIALES __________-->
+                    alt="instagram" /></a>
+            <a target="_blank" href="https://x.com/"><img class="logot" src="../img/twitter.png" alt="twitter" /></a>
+            <!--!__________ REDES-SOCIALES __________-->
             <iframe class="mapa"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.8903318324897!2d-56.21011922359274!3d-34.909201572846335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f7f416b929547%3A0xa9aa847261a19a28!2sNew%20Zealand%20Consulate!5e0!3m2!1ses-419!2suy!4v1725484216069!5m2!1ses-419!2suy"
-                width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                width="200" height="150" style="border: 0" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>

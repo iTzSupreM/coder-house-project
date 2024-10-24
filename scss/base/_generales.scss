@@ -16,11 +16,13 @@ main{
     background-color: burlywood;
     .whatsapp{
         position: fixed;
-        bottom: 200px;
-        right: nth($size, 3);
+        bottom: 100px;
+        right: 50px;
         a{
+            text-decoration: none;
+            list-style: none;
             img{
-                width: 70px;
+                width: nth($f-sz, 3);
             }
         }
     }

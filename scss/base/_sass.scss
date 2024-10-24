@@ -4,8 +4,36 @@ $color-bg-comprar: cadetblue;
 
 
 /* LISTAS*/
-
 $colores: aliceblue, cadetblue, black;
-$size-px: 15px, 20px, 50px;
+$f-sz: 15px, 20px, 50px;
 
-
+/*EXTEND*/
+/*imagen*/
+%img-p{
+    width: 500px;
+    height: 350px;
+}
+/*___________________________________*/
+/*display-flex*/
+%flex-jc{
+    display: flex;
+    justify-content: center;
+}
+%flex-jsa{
+    display: flex;
+    justify-content: space-around;
+}
+/*background*/
+%bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+/*MIXIN*/
+@mixin flex ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+/*___________________________________*/
