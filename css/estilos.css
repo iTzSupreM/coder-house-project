@@ -2,7 +2,7 @@
 /* LISTAS*/
 /*EXTEND*/
 /*imagen*/
-body main .venta-section .div-venta, body main .venta-section .div-venta div div img {
+body .main-venta-principal .venta-section .div-venta, body .main-venta-principal .venta-section .div-venta div div img {
   width: 500px;
   height: 350px; }
 
@@ -74,7 +74,6 @@ main .hero {
     text-decoration: none; }
 
 main .hero2 {
-  height: 300px;
   font-size: 20px; }
   main .hero2 h2 {
     display: flex;
@@ -132,24 +131,24 @@ body span {
     border-radius: 25%;
     text-decoration: none; }
 
-body main {
+body .main-venta-principal {
   height: 1800px; }
-  body main .main-venta h2 {
+  body .main-venta-principal .main-venta h2 {
     font-size: 20px; }
-  body main .main-venta p {
+  body .main-venta-principal .main-venta p {
     font-size: 15px; }
-  body main .venta-section {
+  body .main-venta-principal .venta-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 300px;
     text-align: center; }
-    body main .venta-section .div-venta h2 {
+    body .main-venta-principal .venta-section .div-venta h2 {
       font-size: 20px; }
-    body main .venta-section .div-venta p {
+    body .main-venta-principal .venta-section .div-venta p {
       font-size: 12px; }
-    body main .venta-section .div-venta a {
+    body .main-venta-principal .venta-section .div-venta a {
       text-decoration: none; }
 
 body main .main-venta {

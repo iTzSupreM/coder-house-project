@@ -15,7 +15,6 @@ main{
         }
     }
     .hero2{
-        height: 300px;
         font-size: nth($f-sz, 2);
         h2{
             @include flex(flex, center, center);
@@ -98,7 +97,7 @@ body{
     }
 //__________VENTA__________//
 body{
-    main{
+    .main-venta-principal{
         height: 1800px;
         .main-venta{
             h2{
