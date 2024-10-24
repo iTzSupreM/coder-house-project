@@ -95,35 +95,7 @@
         }
     }
 }
-//_________INDEX-MOBILE-S_________//
-@media screen and (max-width:px){
-    main{
-        .hero{
-            font-size: 2vh;
-            height: 50vh;
-            background-image: url(../img/Hero.jpeg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-attachment: fixed;
-        }
-        .descuento{
-            height: 1200px;
-            div{
-                border: 1px solid grey;
-                text-align: center;
-                height: 350px;
-                border-end-end-radius: 7px;
-                border-end-start-radius: 7px;
-                img{
-                    height: 250px;
-                }
-            }
-        }
-    }
-}
 //___________________________________________________________//
-
 //_________CONTACTO-TABLET_________//
 @media screen and (max-width:768px){
     .main-contacto{

@@ -100,11 +100,15 @@ body{
     .main-venta-principal{
         height: 1800px;
         .main-venta{
+            text-align: center;
             h2{
                 font-size: nth($f-sz, 2);
             }
             p{
                 font-size: nth($f-sz, 1);
+            }
+            a{
+                text-decoration: none;
             }
         }
         .venta-section{
@@ -136,15 +140,36 @@ body{
 }
 //__________ALQUILER__________//
 body{
-    main{
+    .main-alquiler{
         .main-venta{
             text-align: center;
             h2{
-                font-size: 20px;
+                font-size: nth($f-sz, 2);
             }
-            a{
-                text-decoration: none;
-                font-size: 20px;
+        }
+        .venta-section{
+            @include flex (flex, center, center);
+            padding-top: 50px;
+            padding-bottom: 300px;
+            text-align: center;
+            .div-venta{
+                @extend %img-p;
+                div{
+                    div{
+                        img{
+                            @extend %img-p;
+                        }
+                    }
+                }
+                h2{
+                    font-size: nth($f-sz, 2);
+                }
+                p{
+                    font-size: 12px;
+                }
+                a{
+                    text-decoration: none;
+                }
             }
         }
     }

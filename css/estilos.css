@@ -2,7 +2,7 @@
 /* LISTAS*/
 /*EXTEND*/
 /*imagen*/
-body .main-venta-principal .venta-section .div-venta, body .main-venta-principal .venta-section .div-venta div div img {
+body .main-venta-principal .venta-section .div-venta, body .main-venta-principal .venta-section .div-venta div div img, body .main-alquiler .venta-section .div-venta, body .main-alquiler .venta-section .div-venta div div img {
   width: 500px;
   height: 350px; }
 
@@ -133,10 +133,14 @@ body span {
 
 body .main-venta-principal {
   height: 1800px; }
-  body .main-venta-principal .main-venta h2 {
-    font-size: 20px; }
-  body .main-venta-principal .main-venta p {
-    font-size: 15px; }
+  body .main-venta-principal .main-venta {
+    text-align: center; }
+    body .main-venta-principal .main-venta h2 {
+      font-size: 20px; }
+    body .main-venta-principal .main-venta p {
+      font-size: 15px; }
+    body .main-venta-principal .main-venta a {
+      text-decoration: none; }
   body .main-venta-principal .venta-section {
     display: flex;
     justify-content: center;
@@ -151,13 +155,24 @@ body .main-venta-principal {
     body .main-venta-principal .venta-section .div-venta a {
       text-decoration: none; }
 
-body main .main-venta {
+body .main-alquiler .main-venta {
   text-align: center; }
-  body main .main-venta h2 {
+  body .main-alquiler .main-venta h2 {
     font-size: 20px; }
-  body main .main-venta a {
-    text-decoration: none;
+
+body .main-alquiler .venta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 300px;
+  text-align: center; }
+  body .main-alquiler .venta-section .div-venta h2 {
     font-size: 20px; }
+  body .main-alquiler .venta-section .div-venta p {
+    font-size: 12px; }
+  body .main-alquiler .venta-section .div-venta a {
+    text-decoration: none; }
 
 body .grid-nosotros {
   display: grid;
@@ -279,26 +294,6 @@ body footer {
       font-size: 15px; }
   main .whatsapp a img {
     width: 35px; } }
-
-@media screen and (max-width: px) {
-  main .hero {
-    font-size: 2vh;
-    height: 50vh;
-    background-image: url(../img/Hero.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed; }
-  main .descuento {
-    height: 1200px; }
-    main .descuento div {
-      border: 1px solid grey;
-      text-align: center;
-      height: 350px;
-      border-end-end-radius: 7px;
-      border-end-start-radius: 7px; }
-      main .descuento div img {
-        height: 250px; } }
 
 @media screen and (max-width: 768px) {
   .main-contacto form .div-form .div-form-div .form-control {
