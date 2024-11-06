@@ -29,11 +29,13 @@ main{
     }
     .descuento{
         @extend %flex-jsa;
-        height: 700px;
+        height: auto;
         flex-wrap: wrap;
+        gap: 15px;
+        padding-bottom: 10px;
         .borde{
             border: 2px solid grey;
-            height: 624px;
+            width: 293px;
             text-align: center;
             border-radius: nth($f-sz, 1);
             a{
@@ -66,7 +68,7 @@ body{
                 .div-form-div{
                     margin: 10px !important;
                     .form-control{
-                        width: 15%;
+                        width: 220px;
                     }
                     }
                 }
@@ -141,6 +143,7 @@ body{
 //__________ALQUILER__________//
 body{
     .main-alquiler{
+        height: 1500px;
         .main-venta{
             text-align: center;
             h2{
@@ -149,8 +152,7 @@ body{
         }
         .venta-section{
             @include flex (flex, center, center);
-            padding-top: 50px;
-            padding-bottom: 300px;
+            padding-top: 180px;
             text-align: center;
             .div-venta{
                 @extend %img-p;

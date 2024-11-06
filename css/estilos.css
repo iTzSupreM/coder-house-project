@@ -86,11 +86,13 @@ main .hero2 {
     border-bottom: 4px double red; }
 
 main .descuento {
-  height: 700px;
-  flex-wrap: wrap; }
+  height: auto;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px; }
   main .descuento .borde {
     border: 2px solid grey;
-    height: 624px;
+    width: 293px;
     text-align: center;
     border-radius: 15px; }
     main .descuento .borde a {
@@ -113,7 +115,7 @@ body .main-contacto {
     body .main-contacto form .div-form .div-form-div {
       margin: 10px !important; }
       body .main-contacto form .div-form .div-form-div .form-control {
-        width: 15%; }
+        width: 220px; }
   body .main-contacto form div label {
     color: rgba(0, 0, 0, 0.678); }
   body .main-contacto form div textarea {
@@ -155,24 +157,24 @@ body .main-venta-principal {
     body .main-venta-principal .venta-section .div-venta a {
       text-decoration: none; }
 
-body .main-alquiler .main-venta {
-  text-align: center; }
-  body .main-alquiler .main-venta h2 {
-    font-size: 20px; }
-
-body .main-alquiler .venta-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 300px;
-  text-align: center; }
-  body .main-alquiler .venta-section .div-venta h2 {
-    font-size: 20px; }
-  body .main-alquiler .venta-section .div-venta p {
-    font-size: 12px; }
-  body .main-alquiler .venta-section .div-venta a {
-    text-decoration: none; }
+body .main-alquiler {
+  height: 1500px; }
+  body .main-alquiler .main-venta {
+    text-align: center; }
+    body .main-alquiler .main-venta h2 {
+      font-size: 20px; }
+  body .main-alquiler .venta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+    text-align: center; }
+    body .main-alquiler .venta-section .div-venta h2 {
+      font-size: 20px; }
+    body .main-alquiler .venta-section .div-venta p {
+      font-size: 12px; }
+    body .main-alquiler .venta-section .div-venta a {
+      text-decoration: none; }
 
 body .grid-nosotros {
   display: grid;
@@ -233,15 +235,13 @@ body footer {
     border-radius: 70%; }
   body footer .redes-footer {
     display: flex;
-    justify-content: end; }
+    justify-content: space-evenly;
+    padding-bottom: 5px; }
     body footer .redes-footer a {
       width: 40px;
       height: 40px; }
       body footer .redes-footer a img {
-        width: 40px;
-        display: flex; }
-  body footer div p {
-    display: inline-block; }
+        width: 40px; }
 
 @media screen and (max-width: 767px) {
   main .whatsapp {
@@ -250,28 +250,32 @@ body footer {
     main .whatsapp a img {
       width: 35px; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 875px) {
   main .hero {
     font-size: 2vh;
     height: 50vh; }
     main .hero h2 {
-      font-size: 24px; }
-    main .hero p {
       font-size: 20px; }
+    main .hero p {
+      font-size: 16px; }
     main .hero a {
-      font-size: 19px; }
+      font-size: 16px; }
   main .hero2 h2 {
-    font-size: 24px; }
+    font-size: 20px; }
   main .hero2 p {
-    font-size: 18px; }
-  main .descuento {
-    height: 1300px; }
-    main .descuento div {
-      width: 293px; }
+    font-size: 15px; }
+  main .descuento .borde {
+    width: 250px; }
+    main .descuento .borde div ul li {
+      font-size: 13px; }
+    main .descuento .borde div div h5 {
+      font-size: 9px; }
+    main .descuento .borde div div p {
+      font-size: 13px; }
   main .whatsapp a img {
     width: 55px; } }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 675px) {
   main .hero {
     font-size: 1vh;
     height: 42vh; }
@@ -288,17 +292,47 @@ body footer {
     main .hero2 p {
       font-size: 14px;
       padding-top: 0px; }
-  main .descuento {
-    height: 2000px; }
-    main .descuento div h3 {
+  main .descuento .borde {
+    width: 220px; }
+    main .descuento .borde div div h5 {
       font-size: 15px; }
   main .whatsapp a img {
     width: 35px; } }
 
+@media screen and (max-width: 520px) {
+  main .hero {
+    font-size: 0.5vh;
+    height: 32vh; }
+    main .hero h2 {
+      font-size: 15px; }
+    main .hero p {
+      font-size: 11px; }
+    main .hero a {
+      font-size: 11px; }
+  main .hero2 {
+    height: 140px; }
+    main .hero2 h2 {
+      font-size: 15px; }
+    main .hero2 p {
+      font-size: 11px;
+      padding-top: 0px; }
+  main .descuento .borde {
+    width: 180px; }
+    main .descuento .borde div ul li {
+      font-size: 10px; }
+    main .descuento .borde div div h5 {
+      font-size: 7px; }
+    main .descuento .borde div div p {
+      font-size: 10px; }
+    main .descuento .borde div div a {
+      font-size: 12px; }
+  main .whatsapp a img {
+    width: 25px; } }
+
 @media screen and (max-width: 768px) {
   .main-contacto form .div-form .div-form-div .form-control {
     font-size: small;
-    width: 12%; }
+    width: 160px !important; }
   .main-contacto form div label {
     font-size: 18px; }
   .main-contacto form .enviar-div .enviar {
@@ -306,55 +340,109 @@ body footer {
   .main-contacto span {
     font-size: 21px; } }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 550px) {
   .main-contacto h2 {
     font-size: 15px; }
   .main-contacto form .div-form .div-form-div .form-control {
     font-size: 11px;
-    width: 18%; }
+    width: 120px !important; }
   .main-contacto form .div-form div label {
     font-size: 14px; }
+  .main-contacto form .div-form .enviar-div .enviar {
+    font-size: small; }
+  .main-contacto span {
+    font-size: 15px; } }
+
+@media screen and (max-width: 474px) {
+  .main-contacto h2 {
+    font-size: 15px; }
+  .main-contacto form .div-form .div-form-div .form-control {
+    font-size: 11px;
+    width: 90px !important; }
+  .main-contacto form .div-form div label {
+    font-size: 12px; }
   .main-contacto form .div-form .enviar-div .enviar {
     font-size: small; }
   .main-contacto span {
     font-size: 12px; } }
 
 @media screen and (max-width: 520px) {
-  body main {
-    height: 1400px; }
-    body main .main-venta h2 {
+  body .main-venta-principal {
+    height: auto; }
+    body .main-venta-principal .main-venta h2 {
       font-size: 13px; }
-    body main .main-venta p {
+    body .main-venta-principal .main-venta p {
       font-size: 10px; }
-    body main .main-venta a {
+    body .main-venta-principal .main-venta a {
       font-size: 13px; }
-    body main .venta-section .div-venta {
+    body .main-venta-principal .venta-section .div-venta {
       width: 300px;
       height: 300px; }
-      body main .venta-section .div-venta div div img {
+      body .main-venta-principal .venta-section .div-venta div div img {
         width: 300px;
         height: 300px; }
-      body main .venta-section .div-venta h2 {
+      body .main-venta-principal .venta-section .div-venta h2 {
         font-size: 20px; }
-      body main .venta-section .div-venta p {
+      body .main-venta-principal .venta-section .div-venta p {
         font-size: 12px; }
-      body main .venta-section .div-venta a {
+      body .main-venta-principal .venta-section .div-venta a {
         text-decoration: none; } }
 
-@media screen and (max-width: 858px) {
-  body footer .avatar {
-    width: 75px;
-    border-radius: 70%; }
-  body footer .redes-footer a {
-    width: 30px;
-    height: 30px; }
-    body footer .redes-footer a img {
-      width: 30px; }
-  body footer .redes-footer .mapa {
-    width: 170px;
-    height: 120px; }
-  body footer div p {
-    font-size: 12px; } }
+@media screen and (max-width: 315px) {
+  body .main-venta-principal {
+    height: auto; }
+    body .main-venta-principal .main-venta h2 {
+      font-size: 10px; }
+    body .main-venta-principal .main-venta p {
+      font-size: 7px; }
+    body .main-venta-principal .main-venta a {
+      font-size: 10px; }
+    body .main-venta-principal .venta-section .div-venta {
+      width: 250px;
+      height: 250px; }
+      body .main-venta-principal .venta-section .div-venta div div img {
+        width: 250px;
+        height: 250px; }
+      body .main-venta-principal .venta-section .div-venta h2 {
+        font-size: 15px; }
+      body .main-venta-principal .venta-section .div-venta p {
+        font-size: 10px; }
+      body .main-venta-principal .venta-section .div-venta a {
+        text-decoration: none; } }
+
+@media screen and (max-width: 840px) {
+  body .main-alquiler .venta-section .div-venta h2 {
+    font-size: 16px; }
+  body .main-alquiler .venta-section .div-venta p {
+    font-size: 10px; }
+  body .main-alquiler .venta-section .div-venta a {
+    font-size: 10px; } }
+
+@media screen and (max-width: 530px) {
+  body .main-alquiler .venta-section {
+    padding-top: 280px; }
+    body .main-alquiler .venta-section .div-venta {
+      width: 350px;
+      height: 250px; }
+      body .main-alquiler .venta-section .div-venta h2 {
+        font-size: 16px; }
+      body .main-alquiler .venta-section .div-venta p {
+        font-size: 10px; }
+      body .main-alquiler .venta-section .div-venta a {
+        font-size: 10px; } }
+
+@media screen and (max-width: 374px) {
+  body .main-alquiler .venta-section {
+    padding-top: 360px; }
+    body .main-alquiler .venta-section .div-venta {
+      width: 300px;
+      height: 200px; }
+      body .main-alquiler .venta-section .div-venta h2 {
+        font-size: 16px; }
+      body .main-alquiler .venta-section .div-venta p {
+        font-size: 10px; }
+      body .main-alquiler .venta-section .div-venta a {
+        font-size: 10px; } }
 
 @media screen and (max-width: 768px) {
   body .grid-nosotros .grid-div {
@@ -389,7 +477,19 @@ body footer {
     font-size: 10px;
     height: 350px; } }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 858px) {
+  body footer .avatar {
+    width: 75px;
+    border-radius: 70%; }
+  body footer .redes-footer a {
+    width: 30px;
+    height: 30px; }
+    body footer .redes-footer a img {
+      width: 30px; }
+  body footer div p {
+    font-size: 12px; } }
+
+@media screen and (max-width: 515px) {
   body footer .avatar {
     width: 55px;
     border-radius: 70%; }
@@ -399,7 +499,7 @@ body footer {
     body footer .redes-footer a img {
       width: 20px; }
   body footer .redes-footer .mapa {
-    width: 100px;
+    width: 200px;
     height: 70px; }
   body footer div p {
     font-size: 10px; } }

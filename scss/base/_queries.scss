@@ -13,34 +13,48 @@
     }
 }
 //___________________________________________________________//
-//_________INDEX-TABLET_________//
-@media screen and (max-width:768px){
+//_________INDEX_________//
+@media screen and (max-width:875px){
     main{
         .hero{
             font-size: 2vh;
             height: 50vh;
             h2{
-                font-size: 24px;
-            }
-            p{
                 font-size: 20px;
             }
+            p{
+                font-size: 16px;
+            }
             a{
-                font-size: 19px;
+                font-size: 16px;
             }
         }
         .hero2{
             h2{
-                font-size: 24px;
+                font-size: 20px;
             }
             p{
-                font-size: 18px;
+                font-size: 15px;
             }
         }
         .descuento{
-            height: 1300px;
-            div{
-                width: 293px;
+            .borde{
+                width: 250px;
+                div{
+                    ul{
+                        li{
+                            font-size: 13px;
+                        }
+                    }
+                    div{
+                        h5{
+                            font-size: 9px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
             }
         }
         .whatsapp{
@@ -52,8 +66,7 @@
         }
     }
 }
-//_________INDEX-MOBILE-L_________//
-@media screen and (max-width:425px){
+@media screen and (max-width:675px){
     main{
         .hero{
             font-size: 1vh;
@@ -79,10 +92,14 @@
             }
         }
         .descuento{
-            height: 2000px;
-            div{
-                h3{
-                    font-size: 15px;
+            .borde{
+                width: 220px;
+                div{
+                    div{
+                        h5{
+                            font-size: 15px;
+                        }
+                    }
                 }
             }
         }
@@ -95,8 +112,65 @@
         }
     }
 }
+@media screen and (max-width:520px){
+    main{
+        .hero{
+            font-size: 0.5vh;
+            height: 32vh;
+            h2{
+                font-size: 15px;
+            }
+            p{
+                font-size: 11px;
+            }
+            a{
+                font-size: 11px;
+            }
+        }
+        .hero2{
+            height: 140px;
+            h2{
+                font-size: 15px;
+            }
+            p{
+                font-size: 11px;
+                padding-top: 0px;
+            }
+        }
+        .descuento{
+            .borde{
+                width: 180px;
+                div{
+                    ul{
+                        li{
+                            font-size: 10px;
+                        }
+                    }
+                    div{
+                        h5{
+                            font-size: 7px;
+                        }
+                        p{
+                            font-size: 10px;
+                        }
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .whatsapp{
+            a{
+                img{
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
 //___________________________________________________________//
-//_________CONTACTO-TABLET_________//
+//_________CONTACTO_________//
 @media screen and (max-width:768px){
     .main-contacto{
         form{
@@ -104,7 +178,7 @@
                 .div-form-div{
                     .form-control{
                         font-size: small;
-                        width: 12%;
+                        width: 160px !important;
                     }
                     }
                 }
@@ -125,8 +199,7 @@
         }
     
 }
-//_________CONTACTO-MOBILE-L_________//
-@media screen and (max-width:425px){
+@media screen and (max-width:550px){
     .main-contacto{
         h2{
             font-size: 15px;
@@ -136,7 +209,7 @@
                 .div-form-div{
                         .form-control{
                             font-size: 11px;
-                            width: 18%;
+                            width: 120px !important;
                         }
                 }
                 div{
@@ -152,17 +225,46 @@
             }
         }
         span{
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width:474px){
+    .main-contacto{
+        h2{
+            font-size: 15px;
+        }
+        form{
+            .div-form{
+                .div-form-div{
+                        .form-control{
+                            font-size: 11px;
+                            width: 90px !important;
+                        }
+                }
+                div{
+                    label{
+                        font-size: 12px;
+                    }
+                }
+                .enviar-div{
+                    .enviar{
+                        font-size: small;
+                    }
+                }
+            }
+        }
+        span{
             font-size: 12px;
         }
     }
 }
 //___________________________________________________________//
-
-//_________VENTA-MOBILE-L_________//
+//_________VENTA_________//
 @media screen and (max-width:520px){
     body{
-        main{
-            height: 1400px;
+        .main-venta-principal{
+            height: auto;
         .main-venta{
             h2{
                 font-size: 13px;
@@ -200,36 +302,114 @@
         }
     }
 }
-//_________M-Q_FOOTER_________//
-@media screen and (max-width:858px){
+@media screen and (max-width:315px){
     body{
-        footer{
-            .avatar{
-                width: 75px;
-                border-radius: 70%;
+        .main-venta-principal{
+            height: auto;
+        .main-venta{
+            h2{
+                font-size: 10px;
             }
-            .redes-footer{
-                a{
-                    width: 30px;
-                    height: 30px;
-                    img{
-                        width: 30px;
+            p{
+                font-size: 7px;
+            }
+            a{
+                font-size: 10px;
+            }
+        }
+        .venta-section{
+            .div-venta{
+                width: 250px;
+                height: 250px;
+                div{
+                    div{
+                        img{
+                            width: 250px;
+                            height: 250px;
+                        }
                     }
                 }
-                .mapa{
-                    width: 170px;
-                    height: 120px;
+                h2{
+                    font-size: nth($f-sz, 1);
                 }
-            }
-            div{
                 p{
-                    font-size: 12px;
+                    font-size: 10px;
+                }
+                a{
+                    text-decoration: none;
+                }
                 }
             }
         }
     }
 }
-//_________M-Q_NOSOTROS-TABLET_________//
+//____________________________________________________//
+//_________ALQUILER_________//
+@media screen and (max-width:840px){
+    body{
+        .main-alquiler{
+        .venta-section{
+            .div-venta{
+                h2{
+                    font-size:16px;
+                }
+                p{
+                    font-size:10px;
+                }
+                a{
+                    font-size:10px;
+                }
+            }
+        }
+    }
+}
+}
+@media screen and (max-width:530px){
+    body{
+        .main-alquiler{
+        .venta-section{
+            padding-top: 280px;
+            .div-venta{
+                width:350px;
+                height:250px;
+                h2{
+                    font-size:16px;
+                }
+                p{
+                    font-size:10px;
+                }
+                a{
+                    font-size:10px;
+                }
+            }
+        }
+    }
+}
+}
+@media screen and (max-width:374px){
+    body{
+        .main-alquiler{
+        .venta-section{
+            padding-top: 360px;
+            .div-venta{
+                width:300px;
+                height:200px;
+                h2{
+                    font-size:16px;
+                }
+                p{
+                    font-size:10px;
+                }
+                a{
+                    font-size:10px;
+                }
+            }
+        }
+    }
+}
+}
+//____________________________________________________//
+//_________NOSOTROS_________//
 @media screen and (max-width:768px){
     body{
         .grid-nosotros{
@@ -258,7 +438,6 @@
         }
     }
 }
-//_________M-Q_NOSOTROS-MOBIL_________//
 @media screen and (max-width:595px){
     body{
         .grid-nosotros{
@@ -283,8 +462,33 @@
         }
     }
 }
-//_________M-Q_FOOTER-MOBILE-L_________//
-@media screen and (max-width:425px){
+//____________________________________________________//
+//_________FOOTER_________//
+@media screen and (max-width:858px){
+    body{
+        footer{
+            .avatar{
+                width: 75px;
+                border-radius: 70%;
+            }
+            .redes-footer{
+                a{
+                    width: 30px;
+                    height: 30px;
+                    img{
+                        width: 30px;
+                    }
+                }
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:515px){
     body{
         footer{
             .avatar{
@@ -300,7 +504,7 @@
                     }
                 }
                 .mapa{
-                    width: 100px;
+                    width: 200px;
                     height: 70px;
                 }
             }
