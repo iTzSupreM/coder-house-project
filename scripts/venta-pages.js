@@ -1,40 +1,34 @@
-//*_____________________________Ventura-Soho___________________________________________
-function compraVenturaSoho() {
-    // Solicitar la edad del cliente
-    var edad = prompt("¿Cuántos años tienes?");
-    edad = parseInt(Number(edad)); // Convertir a número
-    // Solicitar el presupuesto del cliente
-    var presupuesto = prompt("¿Cuánto dinero tienes disponible para la compra?");
-    presupuesto = parseInt(presupuesto);
-    // Verificación de edad y saldo
-    if (isNaN(edad) || isNaN(presupuesto) || edad < 0 || presupuesto < 0) {
-        alert("Por favor, ingresa datos válidos para la edad y el presupuesto.");
-    } else if (edad < Number(18)) {
-        alert("Lo siento, debes ser mayor de edad para realizar la compra.");
-    } else if (presupuesto < Number(195000)) {
-        alert("Lo siento, no tienes suficiente dinero para realizar la compra.");
-    } else {
-        alert("Felicidades! puedes comprar Ventura Soho y disfrutar ese espacio que tanto deseaste!.");
+class Apartamento {
+    //* Constructor que inicializa las propiedades del apartamento
+    constructor(direccion, habitaciones, banos, precio, tamano) {
+        this.direccion = direccion;
+        this.habitaciones = habitaciones;
+        this.banos = banos;
+        this.precio = precio;
+        this.tamano = tamano; // m2
+    }
+    mostrarDetalles() {
+        console.log(`Apartamento en ${this.direccion}:`);
+        console.log(`Habitaciones: ${this.habitaciones}`);
+        console.log(`Baños: ${this.banos}`);
+        console.log(`Precio: $${this.precio}`);
+        console.log(`Tamaño: ${this.tamano} m²`);
+    }
+    //* Calcular el precio por m2
+    calcularPrecioPorM2() {
+        return this.precio / this.tamano;
+    }
+    //* Método para aumentar el precio por si se modifica el edificio
+    aumentarPrecio(porcentaje) {
+        this.precio += this.precio * (porcentaje / 100);
+        console.log(`El precio del apartamento ha aumentado en un ${porcentaje}%. Nuevo precio: $${this.precio}`);
     }
 }
-//*____________________________________________________________________________________
-//*_____________________________Ventura-Genaro___________________________________________
-function compraVenturaGenaro() {
-    // Solicitar la edad del cliente
-    var edad = prompt("¿Cuántos años tienes?");
-    edad = parseInt(Number(edad)); // Convertir a número
-    // Solicitar el presupuesto del cliente
-    var presupuesto = prompt("¿Cuánto dinero tienes disponible para la compra?");
-    presupuesto = parseInt(presupuesto);
-debugger
-    // Verificación de edad y saldo
-    if (isNaN(edad) || isNaN(presupuesto) || edad < 0 || presupuesto < 0) {
-        alert("Por favor, ingresa datos válidos para la edad y el presupuesto.");
-    } else if (edad < Number(18)) {
-        alert("Lo siento, debes ser mayor de edad para realizar la compra.");
-    } else if (presupuesto < Number(125500)) {
-        alert("Lo siento, no tienes suficiente dinero para realizar la compra.");
-    } else {
-        alert("Felicidades! Ventura Genarò ya es tuyo!.");
-    }
-}
+//*______Ventura-Soho
+let apartamento1 = new Apartamento("Ventura Soho 2570", 0, 1, 195500, 120000);
+//*_____Ventura-Genaro
+let apartamento2 = new Apartamento("Ventura Genaro 750", 2, 1, 125500, 78000);
+//* Detalles del apartamento
+apartamento1.mostrarDetalles();
+apartamento2.mostrarDetalles();
+
