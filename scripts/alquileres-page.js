@@ -196,4 +196,32 @@ function verificarEdad() {
 verificarEdad();
 */
 
-//?____________________________________________Agregando-DOM-Sin-Editar-HTML_____________________________________________________
+//?____________________________________________filter_____________________________________________________
+const apartamentos = [
+    { id: 1, nameApt: "Apartamento Kref Centrico", precio: 450, habitaciones: 2, disponible: false },
+    { id: 2, nameApt: "Apartamento Hz Kief", precio: 650, habitaciones: 1, disponible: true },
+];
+
+// Filtrar apartamentos disponibles en una ciudad específica
+function filtrarDisponibles(apartamentos, nameApt) {
+    return apartamentos.filter(
+        (apto) => apto.disponible && apto.nameApt === nameApt
+    );
+}
+
+console.log(filtrarDisponibles(apartamentos, "Apartamento Hz Kief"));
+
+const precios = apartamentos
+    .filter((apto) => apto.disponible)
+    .map((apto) => apto.precio); 
+
+console.log(apartamentos);
+console.log(precios);
+
+function calcularPromedioPrecio(apartamentos) {
+    const disponibles = apartamentos.filter((apto) => apto.disponible);
+    const total = disponibles.reduce((sum, apto) => sum + apto.precio, 0);
+    return disponibles.length ? total / disponibles.length : 0;
+}
+
+console.log(calcularPromedioPrecio(apartamentos));
