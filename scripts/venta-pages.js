@@ -1,34 +1,40 @@
-class Apartamento {
-    //* Constructor que inicializa las propiedades del apartamento
-    constructor(direccion, habitaciones, banos, precio, tamano) {
-        this.direccion = direccion;
-        this.habitaciones = habitaciones;
-        this.banos = banos;
-        this.precio = precio;
-        this.tamano = tamano; // m2
+// Función para manejar la compra
+function comprarApartamento(event) {
+    const numeroApartamento = event.target.dataset.apartamento; // Número del apartamento clickeado
+    // Preguntar si ya vio el apartamento
+    const vioApartamento = confirm(`¿Ya ha visto el Apartamento ${numeroApartamento}?`);
+    if (!vioApartamento) {
+        alert('Debe ver el apartamento antes de realizar la compra.');
+        return;
     }
-    mostrarDetalles() {
-        console.log(`Apartamento en ${this.direccion}:`);
-        console.log(`Habitaciones: ${this.habitaciones}`);
-        console.log(`Baños: ${this.banos}`);
-        console.log(`Precio: $${this.precio}`);
-        console.log(`Tamaño: ${this.tamano} m²`);
+    // Preguntar si le gustó el apartamento
+    const gustoApartamento = confirm(`¿Le gustó el Apartamento ${numeroApartamento}?`);
+    if (!gustoApartamento) {
+        alert('Lamentamos que no le haya gustado. Puede revisar otras opciones.');
+        return;
     }
-    //* Calcular el precio por m2
-    calcularPrecioPorM2() {
-        return this.precio / this.tamano;
+    // Solicitar datos del comprador
+    const nombre = prompt('Ingrese su nombre:');
+    const edad = prompt('Ingrese su edad:');
+    const contacto = prompt('Ingrese su número de contacto:');
+    // Validar que se proporcionaron todos los datos
+    if (!nombre || !edad || !contacto) {
+        alert('Debe proporcionar todos los datos para continuar con la compra.');
+        return;
     }
-    //* Método para aumentar el precio por si se modifica el edificio
-    aumentarPrecio(porcentaje) {
-        this.precio += this.precio * (porcentaje / 100);
-        console.log(`El precio del apartamento ha aumentado en un ${porcentaje}%. Nuevo precio: $${this.precio}`);
+    // Validar que sea mayor de edad
+    if (parseInt(edad, 10) < 18) {
+        alert('Debe ser mayor de edad para realizar esta compra.');
+        return;
     }
+    // Confirmar la compra
+    alert(`¡Gracias, ${nombre}! Nos contactaremos al ${contacto} para finalizar la compra del Apartamento ${numeroApartamento}.`);
+    // Opcional: Deshabilitar el botón después de la compra
+    event.target.disabled = true;
+    event.target.textContent = 'Vendido';
 }
-//*______Ventura-Soho
-let apartamento1 = new Apartamento("Ventura Soho 2570", 0, 1, 195500, 120000);
-//*_____Ventura-Genaro
-let apartamento2 = new Apartamento("Ventura Genaro 750", 2, 1, 125500, 78000);
-//* Detalles del apartamento
-apartamento1.mostrarDetalles();
-apartamento2.mostrarDetalles();
-
+// Seleccionar los botones con getElementsByClassName y asignar eventos
+const botonesComprar = document.getElementsByClassName('comprar');
+for (let boton of botonesComprar) {
+    boton.addEventListener('click', comprarApartamento);
+}
