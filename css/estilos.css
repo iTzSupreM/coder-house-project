@@ -133,8 +133,6 @@ body span {
     border-radius: 25%;
     text-decoration: none; }
 
-body .main-venta-principal {
-  height: 1800px; }
   body .main-venta-principal .main-venta {
     text-align: center; }
     body .main-venta-principal .main-venta h2 {
@@ -157,8 +155,7 @@ body .main-venta-principal {
     body .main-venta-principal .venta-section .div-venta a {
       text-decoration: none; }
 
-body .main-alquiler {
-  height: 1500px; }
+body .main-alquiler
   body .main-alquiler .main-venta {
     text-align: center; }
     body .main-alquiler .main-venta h2 {

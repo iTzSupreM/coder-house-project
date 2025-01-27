@@ -1,46 +1,162 @@
-const apartamentos = {
-    1: { alquilado: false, precio: 450, conDescuento: false },
-    2: { alquilado: false, precio: 650, conDescuento: false },
+// Lista de apartamentos disponibles
+const apartamentos = [
+    { id: 1, nombre: "Apartamento Kref Centrico", precioMensual: 450, disponible: true },
+    { id: 2, nombre: "Apartamento Hz Kief", precioMensual: 650, disponible: true },
+];
+
+// Alquiler activo
+let alquiler = JSON.parse(localStorage.getItem("alquiler")) || null;
+
+// Renderizar la lista de apartamentos
+const renderApartamentos = () => {
+    const contenedor = document.getElementById("apartamentos");
+    contenedor.innerHTML = "";
+    apartamentos.forEach((apto) => {
+        const div = document.createElement("div");
+        div.classList.add("col-md-4");
+        div.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${apto.nombre}</h5>
+                    <p class="card-text">Precio mensual: $${apto.precioMensual}</p>
+                    <button class="btn btn-primary" ${!apto.disponible ? "disabled" : ""} data-id="${apto.id}">
+                        ${apto.disponible ? "Alquilar" : "No disponible"}
+                    </button>
+                </div>
+            </div>
+        `;
+        contenedor.appendChild(div);
+    });
+
+    document.querySelectorAll("button[data-id]").forEach((boton) => {
+        boton.addEventListener("click", (e) => {
+            const id = parseInt(boton.dataset.id, 10);
+            iniciarAlquiler(id);
+        });
+    });
 };
 
-// Función para manejar el alquiler
-function manejarAlquiler(event) {
-    const numeroApartamento = event.target.dataset.apartamento;
-    const apartamento = apartamentos[numeroApartamento];
+// Iniciar alquiler
+const iniciarAlquiler = (id) => {
+    const apartamento = apartamentos.find((apto) => apto.id === id);
 
-    // Verificar si el apartamento ya está alquilado
-    if (!apartamento.alquilado) {
-        const alquilar = confirm(`¿Desea alquilar el Apartamento ${numeroApartamento} por $${apartamento.precio}/mes?`);
-        if (alquilar) {
-            apartamento.alquilado = true;
-            alert(`¡Has alquilado el Apartamento ${numeroApartamento}!`);
-            event.target.textContent = 'Gestionar Alquiler';
-        }
-    } else {
-        // Opciones para apartamentos ya alquilados
-        const opcion = prompt(
-            `El Apartamento ${numeroApartamento} ya está alquilado. Elige una opción:\n1. Dar de baja\n2. Continuar con el alquiler (descuento del 10%)`
-        );
-        if (opcion === '1') {
-            apartamento.alquilado = false;
-            apartamento.conDescuento = false; // Reiniciar descuento al dar de baja
-            alert(`El alquiler del Apartamento ${numeroApartamento} ha sido dado de baja.`);
-            event.target.textContent = 'Alquilar';
-        } else if (opcion === '2') {
-            if (apartamento.conDescuento) {
-                alert('El descuento ya se aplicó previamente. El precio mensual actual es $' + apartamento.precio.toFixed(2) + '.');
-            } else {
-                apartamento.precio = apartamento.precio * 0.9; // Aplicar descuento del 10%
-                apartamento.conDescuento = true; // Marcar que ya tiene descuento
-                alert(`¡Gracias por continuar con el alquiler! El nuevo precio mensual es $${apartamento.precio.toFixed(2)}.`);
-            }
-        } else {
-            alert('Opción no válida. Intenta nuevamente.');
-        }
+    if (!apartamento.disponible) {
+        Swal.fire({
+            title: "Error",
+            text: "El apartamento ya está alquilado.",
+            icon: "error",
+        });
+        return;
     }
-}
-// Asignar eventos a los botones
-const botonesAlquilar = document.getElementsByClassName('alquilar');
-for (let boton of botonesAlquilar) {
-    boton.addEventListener('click', manejarAlquiler);
-}
+
+    Swal.fire({
+        title: "Alquilar apartamento",
+        input: "number",
+        inputLabel: "¿Por cuántos meses deseas alquilar?",
+        inputAttributes: {
+            min: 1,
+        },
+        showCancelButton: true,
+        confirmButtonText: "Alquilar",
+        cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed && result.value) {
+            const meses = parseInt(result.value, 10);
+            const descuento = meses >= 6 ? 0.15 : meses >= 3 ? 0.1 : 0;
+            const precioFinal =
+                apartamento.precioMensual * meses * (1 - descuento);
+
+            const fechaInicio = new Date();
+            const fechaFin = new Date(
+                fechaInicio.setMonth(fechaInicio.getMonth() + meses)
+            );
+
+            alquiler = {
+                apartamento,
+                meses,
+                precioFinal,
+                fechaInicio: new Date(),
+                fechaFin,
+            };
+
+            apartamento.disponible = false;
+            guardarAlquiler();
+            renderApartamentos();
+            renderAlquilerActivo();
+
+            Swal.fire({
+                title: "¡Alquiler confirmado!",
+                text: `Has alquilado el ${apartamento.nombre} por ${meses} meses. Precio total: $${precioFinal.toFixed(
+                    2
+                )}.`,
+                icon: "success",
+            });
+        }
+    });
+};
+
+// Renderizar alquiler activo
+const renderAlquilerActivo = () => {
+    const contenedor = document.getElementById("alquilerActivo");
+    contenedor.innerHTML = "";
+
+    if (alquiler) {
+        const tiempoRestante =
+            (new Date(alquiler.fechaFin) - new Date()) / (1000 * 60 * 60 * 24);
+
+        const li = document.createElement("li");
+        li.classList.add("list-group-item");
+        li.innerHTML = `
+            <strong>${alquiler.apartamento.nombre}</strong> - Precio total: $${alquiler.precioFinal.toFixed(
+            2
+        )} <br>
+            Fecha de inicio: ${new Date(alquiler.fechaInicio).toLocaleString()} <br>
+            Fecha de fin: ${new Date(alquiler.fechaFin).toLocaleString()} <br>
+            Tiempo restante: ${Math.ceil(tiempoRestante)} días
+            <button class="btn btn-danger mt-3" id="finalizarAlquiler">Finalizar alquiler</button>
+        `;
+        contenedor.appendChild(li);
+
+        document
+            .getElementById("finalizarAlquiler")
+            .addEventListener("click", finalizarAlquiler);
+    }
+};
+
+// Finalizar alquiler
+const finalizarAlquiler = () => {
+    Swal.fire({
+        title: "¿Estás seguro?",
+        text: "Cancelaras el contrato y finalizará el contrato.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Sí, finalizar",
+        cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            apartamentos.find(
+                (apto) => apto.id === alquiler.apartamento.id
+            ).disponible = true;
+
+            alquiler = null;
+            guardarAlquiler();
+            renderApartamentos();
+            renderAlquilerActivo();
+
+            Swal.fire({
+                title: "Alquiler finalizado",
+                text: "El apartamento ahora está disponible.",
+                icon: "success",
+            });
+        }
+    });
+};
+
+// Guardar alquiler en localStorage
+const guardarAlquiler = () => {
+    localStorage.setItem("alquiler", JSON.stringify(alquiler));
+};
+
+// Inicializar
+renderApartamentos();
+renderAlquilerActivo();

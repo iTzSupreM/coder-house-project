@@ -100,7 +100,6 @@ body{
 //__________VENTA__________//
 body{
     .main-venta-principal{
-        height: 1800px;
         .main-venta{
             text-align: center;
             h2{
@@ -152,7 +151,7 @@ body{
         }
         .venta-section{
             @include flex (flex, center, center);
-            padding-top: 180px;
+            padding: 180px;
             text-align: center;
             .div-venta{
                 @extend %img-p;

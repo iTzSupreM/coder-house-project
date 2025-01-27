@@ -1,45 +1,49 @@
-const nombreInput = document.getElementById('nombre');
-const apellidoInput = document.getElementById('apellido');
-const emailInput = document.getElementById('email');
-const telefonoInput = document.getElementById('telefono');
-const mensajeInput = document.getElementById('mensaje');
-const btnEnviar = document.getElementById('enviarForm');
-const btnLimpiar = document.getElementById('resetForm');
-//! Función para manejar el envío del formulario
-function enviarFormulario() {
-    const datosFormulario = {
-        nombre: nombreInput.value,
-        apellido: apellidoInput.value,
-        email: emailInput.value,
-        telefono: telefonoInput.value,
-        mensaje: mensajeInput.value,
-    };
-    // Validar que todos los campos estén llenos
-    if (
-        !datosFormulario.nombre ||
-        !datosFormulario.apellido ||
-        !datosFormulario.email ||
-        !datosFormulario.telefono ||
-        !datosFormulario.mensaje
-    ) {
-        alert('Por favor, completa todos los datos del formulario.');
-        return;
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que se recargue la página
+
+        // Obtiene los valores del formulario
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        // Validación básica
+        if (name && email && phone) {
+            const contactData = { name, email, phone, message };
+            localStorage.setItem("contactData", JSON.stringify(contactData));
+
+            // Muestra una alerta de éxito al usuario con SweetAlert2
+            Swal.fire({
+                title: '¡Formulario enviado!',
+                text: 'Te contactaremos a la brevedad.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+
+            // Limpia el formulario
+            document.getElementById("contactForm").reset();
+        } else {
+            // Muestra una alerta de error con SweetAlert2
+            Swal.fire({
+                title: 'Campos incompletos',
+                text: 'Por favor, completa todos los campos requeridos.',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    });
+
+// Recuperar datos del LocalStorage al cargar la página
+window.addEventListener("load", function () {
+    const savedData = localStorage.getItem("contactData");
+    if (savedData) {
+        const { name, email, phone, message } = JSON.parse(savedData);
+        document.getElementById("name").value = name;
+        document.getElementById("email").value = email;
+        document.getElementById("phone").value = phone;
+        document.getElementById("message").value = message;
     }
-    alert('¡Formulario enviado con éxito!');
-    localStorage.setItem('formulario', JSON.stringify(datosFormulario));
-}
-//! Función para limpiar el formulario
-function limpiarFormulario() {
-    nombreInput.value = '';
-    apellidoInput.value = '';
-    emailInput.value = '';
-    telefonoInput.value = '';
-    mensajeInput.value = '';
-
-    // Eliminar los datos del localStorage
-    localStorage.removeItem('formulario');
-    alert('Haz limpiado el formulario correctamente.');
-}
-
-enviarForm.addEventListener('click', enviarFormulario);
-resetForm.addEventListener('click', limpiarFormulario);
+});
+//!________________________________________DONE
